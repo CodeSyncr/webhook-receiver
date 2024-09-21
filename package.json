@@ -11,7 +11,9 @@
     "test": "node ace test",
     "lint": "eslint .",
     "format": "prettier --write .",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "db:setup": "node ace db:drop; node ace db:create; node ace migration:run; node ace db:seed",
+    "db:setup:win": "node ace db:drop && node ace db:create && node ace migration:run && node ace db:seed"
   },
   "imports": {
     "#controllers/*": "./app/controllers/*.js",
